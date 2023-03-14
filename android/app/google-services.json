@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "328647597789",
+    "project_id": "capstone-58f53",
+    "storage_bucket": "capstone-58f53.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:328647597789:android:23f4e4859509abd35f8534",
+        "android_client_info": {
+          "package_name": "com.example.iot"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "328647597789-ka5pdk3q3ji1bdm57qlop8u6nl7f676o.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.iot",
+            "certificate_hash": "fbfadaff053c68d0d3c9b163ca3734fce7c1fedb"
+          }
+        },
+        {
+          "client_id": "328647597789-a1im1lm2ut7j3fp6of24s9jcof2jbvgt.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAVm9VIaQC6vDuS2Hvm6YHkPTTaAqDGNbg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "328647597789-a1im1lm2ut7j3fp6of24s9jcof2jbvgt.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
