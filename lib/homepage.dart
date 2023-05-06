@@ -28,7 +28,7 @@ showNotification(String message) {
 }
 
 class _HomePageState extends State<HomePage> {
-  final _databaseReference = FirebaseDatabase.instance.reference();
+  final _databaseReference = FirebaseDatabase.instance.ref();
   bool showButton = false;
 
   @override
@@ -55,11 +55,11 @@ class _HomePageState extends State<HomePage> {
         body: Container(
           height: MediaQuery.of(context).size.height,
           // color: const Color.fromRGBO(162, 121, 21, 0.5),
-          padding: const EdgeInsets.only(top: 30),
+          // padding: const EdgeInsets.only(top: 30),
           child: StreamBuilder(
             stream: _databaseReference.onValue,
             builder: (context, AsyncSnapshot snapshot) {
-              if (snapshot.hasData) {
+              if (snapshot.data != null) {
                 var data = snapshot.data!.snapshot.value;
                 return Column(
                   children: [
@@ -69,6 +69,7 @@ class _HomePageState extends State<HomePage> {
                       moisture: data['Soil_Value'],
                       context: context,
                     ),
+                    
                     const SizedBox(height: 20),
                     data['Motor_Status'] == 1
                         ? ElevatedButton(
@@ -151,13 +152,13 @@ Widget _buildContainer({
         animation: true,
         animationDuration: 1500,
         animateFromLastPercent: true,
-        radius: 170.0,
+        radius: 80.0,
         lineWidth: 15,
         percent: check ? value / 100 : 1.0,
         center: Text(
           check ? "${value} %" : "${value} °C",
           style: const TextStyle(
-            fontSize: 40,
+            fontSize: 28,
             fontWeight: FontWeight.bold,
           ),
         ),
